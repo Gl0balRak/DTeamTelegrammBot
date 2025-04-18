@@ -7,7 +7,7 @@ from decouple import config
 
 from typing import List
 
-from middlewares.chat_user_accounting import chats_users
+from middlewares.chat_user_accounting.chat_user_accounting import chats_users
 
 team_management_router = Router()
 
