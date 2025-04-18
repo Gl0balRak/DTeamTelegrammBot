@@ -26,9 +26,9 @@ def init_chat_user_accounting():
                 chat_id, user_id = map(int, line.split(','))
 
                 if chat_id in chats_users.keys():
-                    chats_users[chat_id].append(user_id)
+                    chats_users[chat_id].add(user_id)
                 else:
-                    chats_users.update({chat_id: [user_id]})
+                    chats_users.update({chat_id: {user_id}})
         return
 
     # Create empty file
